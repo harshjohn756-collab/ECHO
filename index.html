@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECHO — Privacy-First Personal Relationship Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Top Navigation / App Bar -->
+  <header class="app-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <div class="logo-icon">
+          <span class="wave-bar b1"></span>
+          <span class="wave-bar b2"></span>
+          <span class="wave-bar b3"></span>
+          <span class="wave-bar b4"></span>
+          <span class="wave-bar b5"></span>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">ECHO <span class="badge-tag">AI</span></div>
+          <div class="brand-subtitle">Personal Relationship Intelligence</div>
+        </div>
+      </div>
+
+      <div class="header-status">
+        <div class="privacy-badge" title="No audio or text content is ever read or transmitted. Only local metadata patterns.">
+          <span class="shield-dot"></span>
+          <span>100% On-Device Metadata</span>
+        </div>
+        <button id="pitchModeBtn" class="btn-pitch" title="Launch the 30-Second Judge Presentation Walkthrough">
+          <span class="pitch-pulse"></span>
+          <span class="pitch-text">🎙️ 30s Pitch Walkthrough</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container main-content">
+    
+    <!-- Hero Insight Section -->
+    <section class="hero-section" id="heroCard">
+      <div class="hero-eyebrow">
+        <span class="sparkle">✦</span>
+        <span>CORE RELATIONSHIP INTELLIGENCE</span>
+        <span class="chip-active">Real-Time Synthesis</span>
+      </div>
+      <h1 class="core-insight-text" id="coreInsightText">
+        Analyzing your communication metadata patterns...
+      </h1>
+      <div class="hero-meta-row">
+        <div class="meta-pill text-alert">
+          <span class="icon">💬</span>
+          <span id="mixPillText">87% Text-Based</span>
+        </div>
+        <div class="meta-pill warn-alert">
+          <span class="icon">⚠️</span>
+          <span id="neglectedPillText">Mark: 14 Days Inactive</span>
+        </div>
+        <div class="meta-pill privacy-alert">
+          <span class="icon">🔒</span>
+          <span>Zero Cloud Telemetry</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Action Nudge Section (Prompt 3 UI Prompt 2) -->
+    <section class="nudge-section" id="nudgeSection">
+      <div class="nudge-trigger-wrapper">
+        <button id="nudgeBtn" class="btn-nudge" aria-label="Suggest an Action">
+          <span class="sparkle-icon">✨</span>
+          <span class="btn-nudge-label">Suggest an Action</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <span class="nudge-hint">Tap to ask Echo for an actionable social wellness recommendation</span>
+      </div>
+
+      <!-- Action Card Revealed Upon Click -->
+      <div class="nudge-card hidden" id="nudgeCard">
+        <div class="nudge-header">
+          <div class="nudge-badge">
+            <span class="pulse-ring"></span>
+            <span>RECOMMENDED GENTLE NUDGE</span>
+          </div>
+          <span class="nudge-context-label">Frictionless Wellness</span>
+        </div>
+        
+        <div class="nudge-body">
+          <div class="nudge-quote-wrapper">
+            <div class="quote-mark">“</div>
+            <p class="nudge-text" id="nudgeText">
+              How about giving Mark a call this weekend? A 10-minute call can be more powerful than 50 texts.
+            </p>
+          </div>
+
+          <div class="nudge-science-note">
+            <span class="brain-icon">🧠</span>
+            <span><strong>The Science:</strong> Asynchronous texting triggers micro-dopamine loops without releasing oxytocin. Vocal resonance restores authentic emotional connection in under 8 minutes.</span>
+          </div>
+
+          <div class="nudge-action-buttons">
+            <button class="action-btn call-action" id="simulateCallBtn">
+              <span class="action-icon">📞</span>
+              <span>Simulate Call with Mark</span>
+            </button>
+            <button class="action-btn cal-action" id="calendarActionBtn">
+              <span class="action-icon">📅</span>
+              <span>Schedule Weekend Catchup</span>
+            </button>
+            <button class="action-btn voice-action" id="voiceNoteActionBtn">
+              <span class="action-icon">🎙️</span>
+              <span>Send 30s Voice Note</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="nudge-feedback hidden" id="nudgeFeedback">
+          <span class="check-icon">✓</span>
+          <span id="feedbackText">Action logged! Recalculating social wellness metrics...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specific Insights & Metrics Grid (Prompt 3 UI Prompt 1) -->
+    <section class="insights-grid">
+      
+      <!-- Card 1: Communication Mix -->
+      <div class="card metric-card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="card-icon">📊</span>
+            <span>Communication Mix</span>
+          </div>
+          <span class="status-indicator warning" id="mixIndicator">Imbalanced</span>
+        </div>
+        <div class="card-body">
+          <div class="chart-flex">
+            <div class="donut-wrapper">
+              <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path id="donutSegment" class="circle"
+                  stroke-dasharray="87, 100"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <div class="donut-text">
+                <span class="big-percent" id="mixPercentDisplay">87%</span>
+                <span class="tiny-label">Text</span>
+              </div>
+            </div>
+            <div class="legend-col">
+              <div class="legend-row">
+                <span class="legend-dot text-color"></span>
+                <span class="legend-name">Text Messages</span>
+                <span class="legend-val" id="textCountDisplay">40</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-dot call-color"></span>
+                <span class="legend-name">Voice Calls</span>
+                <span class="legend-val" id="callCountDisplay">6</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-dot meet-color"></span>
+                <span class="legend-name">In-Person Events</span>
+                <span class="legend-val" id="meetCountDisplay">1</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-summary" id="mixSummaryText">
+            Your communication has been 87% text-based this month.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Neglected Bonds Radar -->
+      <div class="card metric-card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="card-icon">⏳</span>
+            <span>Neglected Bonds Radar</span>
+          </div>
+          <span class="status-indicator alert">Needs Attention</span>
+        </div>
+        <div class="card-body">
+          <div class="neglected-person-box">
+            <div class="person-avatar" id="neglectedAvatar">🧗‍♂️</div>
+            <div class="person-details">
+              <div class="person-name" id="neglectedName">Mark (Close Friend)</div>
+              <div class="person-meta">Inner Circle • Inactive for <span class="highlight-days" id="neglectedDays">14 days</span></div>
+            </div>
+            <div class="drift-badge">Silent Drift</div>
+          </div>
+          <p class="card-summary" id="neglectedSummaryText">
+            You haven't connected with Mark (Close Friend) in over a week.
+          </p>
+          <div class="neglected-timeline-bar">
+            <div class="timeline-label">Days since last vocal/text connection</div>
+            <div class="timeline-track">
+              <div class="timeline-fill" style="width: 78%;"></div>
+              <div class="threshold-line" title="7-day attention threshold"></div>
+            </div>
+            <div class="timeline-ticks">
+              <span>Day 0</span>
+              <span class="threshold-marker">7-day threshold</span>
+              <span class="danger-marker">14 days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Social Wellness Index -->
+      <div class="card metric-card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="card-icon">🌱</span>
+            <span>Social Wellness Score</span>
+          </div>
+          <span class="score-pill" id="scorePill">64 / 100</span>
+        </div>
+        <div class="card-body">
+          <div class="wellness-gauge">
+            <div class="gauge-bar-bg">
+              <div class="gauge-bar-fill" id="wellnessBarFill" style="width: 64%;"></div>
+            </div>
+            <div class="gauge-status-row">
+              <span class="gauge-caption" id="wellnessCaption">Attention Needed (High Text Fatigue)</span>
+              <span class="gauge-target">Optimal: 85+</span>
+            </div>
+          </div>
+
+          <div class="wellness-breakdown">
+            <div class="w-item">
+              <span class="w-label">Deep Bonds</span>
+              <span class="w-val warn" id="deepBondsVal">At Risk</span>
+            </div>
+            <div class="w-divider"></div>
+            <div class="w-item">
+              <span class="w-label">Voice Ratio</span>
+              <span class="w-val warn" id="voiceRatioVal">13%</span>
+            </div>
+            <div class="w-divider"></div>
+            <div class="w-item">
+              <span class="w-label">Data Privacy</span>
+              <span class="w-val good">100% Local</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Specific Actionable Insights Breakdown List (Prompt 3 UI Prompt 1) -->
+    <section class="specific-insights-section">
+      <div class="section-title-row">
+        <h2>Specific Behavioral Insights</h2>
+        <span class="insight-count">3 Patterns Detected</span>
+      </div>
+      <div class="insights-list" id="insightsList">
+        
+        <div class="insight-row">
+          <div class="insight-icon-col text-icon">💬</div>
+          <div class="insight-content-col">
+            <div class="insight-heading">The Asynchronous Friction Trap</div>
+            <div class="insight-desc">
+              Your communication has been 87% text-based this month. Over 40 text pings were exchanged, which elevates conversational latency and creates illusion of connectivity without emotional resonance.
+            </div>
+          </div>
+          <div class="insight-tag">Bandwidth: Low</div>
+        </div>
+
+        <div class="insight-row">
+          <div class="insight-icon-col warn-icon">⏳</div>
+          <div class="insight-content-col">
+            <div class="insight-heading">Silent Drift in Your Inner Circle</div>
+            <div class="insight-desc">
+              You haven't connected with Mark (Close Friend) in over a week. Last voice contact was 14 days ago. Research shows friendships decline after 15-20 days of silence.
+            </div>
+          </div>
+          <div class="insight-tag tag-warning">Urgent</div>
+        </div>
+
+        <div class="insight-row">
+          <div class="insight-icon-col work-icon">💼</div>
+          <div class="insight-content-col">
+            <div class="insight-heading">Work Dominance Over Personal Life</div>
+            <div class="insight-desc">
+              Communications with David (Work) account for 26% of all weekly exchanges, displacing unstructured social calls with close companions.
+            </div>
+          </div>
+          <div class="insight-tag">Balance Check</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Simulated Data Viewer / Scenario Switcher for Demo Ease -->
+    <section class="demo-controls-bar">
+      <div class="demo-controls-inner">
+        <span class="demo-badge">DEMO SIMULATOR</span>
+        <span class="demo-desc">Switch data state to test live engine reactivity:</span>
+        <div class="scenario-buttons">
+          <button class="btn-scenario active" id="scenarioDefaultBtn">Original Imbalance</button>
+          <button class="btn-scenario" id="scenarioConnectedBtn">After Taking Action</button>
+          <button class="btn-scenario" id="scenarioResetBtn">Reset Data</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pitch Walkthrough Modal / Step-by-Step Presentation Guide -->
+  <div class="pitch-modal-backdrop hidden" id="pitchModal">
+    <div class="pitch-modal">
+      <div class="pitch-modal-header">
+        <div class="pitch-title-col">
+          <span class="pitch-step-counter" id="pitchStepCounter">STEP 1 OF 5</span>
+          <h3 id="pitchStepTitle">The Problem</h3>
+        </div>
+        <button class="close-pitch-btn" id="closePitchBtn">&times;</button>
+      </div>
+
+      <div class="pitch-modal-body">
+        <div class="speaker-bubble">
+          <span class="speaker-role">You say to the judges:</span>
+          <p class="speaker-script" id="speakerScript">
+            “We are more connected, yet more lonely than ever. This is a major health crisis.”
+          </p>
+        </div>
+        <div class="pitch-action-tip" id="pitchActionTip">
+          <strong>Tip:</strong> Hook the judges with the core societal paradox: infinite notifications, zero authentic presence.
+        </div>
+      </div>
+
+      <div class="pitch-modal-footer">
+        <button class="btn-pitch-nav" id="pitchPrevBtn" disabled>← Previous</button>
+        <div class="pitch-dots" id="pitchDots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="btn-pitch-nav primary" id="pitchNextBtn">Next Step →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="insights_engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

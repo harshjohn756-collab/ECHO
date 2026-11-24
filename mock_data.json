@@ -1,0 +1,108 @@
+{
+  "reference_date": "2026-11-24T12:00:00Z",
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Mark (Close Friend)",
+      "group": "close_friends",
+      "phone": "+1 (555) 234-5678",
+      "relationship_since": "2018",
+      "avatar_emoji": "🧗‍♂️"
+    },
+    {
+      "id": 2,
+      "name": "Sarah (Family)",
+      "group": "family",
+      "phone": "+1 (555) 345-6789",
+      "relationship_since": "Always",
+      "avatar_emoji": "👩‍👧"
+    },
+    {
+      "id": 3,
+      "name": "David (Work)",
+      "group": "work",
+      "phone": "+1 (555) 456-7890",
+      "relationship_since": "2024",
+      "avatar_emoji": "💼"
+    },
+    {
+      "id": 4,
+      "name": "Jane (Friend)",
+      "group": "friends",
+      "phone": "+1 (555) 567-8901",
+      "relationship_since": "2021",
+      "avatar_emoji": "🎨"
+    },
+    {
+      "id": 5,
+      "name": "Maya (Close Friend)",
+      "group": "close_friends",
+      "phone": "+1 (555) 678-9012",
+      "relationship_since": "2019",
+      "avatar_emoji": "🌟"
+    },
+    {
+      "id": 6,
+      "name": "Mom (Family)",
+      "group": "family",
+      "phone": "+1 (555) 789-0123",
+      "relationship_since": "Always",
+      "avatar_emoji": "🏡"
+    }
+  ],
+  "communications": [
+    { "id": "c01", "type": "call", "contact_id": 1, "timestamp": "2026-11-10T14:32:00Z", "duration_seconds": 780 },
+    { "id": "c02", "type": "text_sent", "contact_id": 1, "timestamp": "2026-11-10T16:10:00Z" },
+    { "id": "c03", "type": "text_received", "contact_id": 1, "timestamp": "2026-11-10T16:15:00Z" },
+
+    { "id": "c04", "type": "text_sent", "contact_id": 2, "timestamp": "2026-11-23T19:22:00Z" },
+    { "id": "c05", "type": "text_received", "contact_id": 2, "timestamp": "2026-11-23T19:25:00Z" },
+    { "id": "c06", "type": "text_sent", "contact_id": 2, "timestamp": "2026-11-22T08:14:00Z" },
+    { "id": "c07", "type": "text_received", "contact_id": 2, "timestamp": "2026-11-22T08:18:00Z" },
+    { "id": "c08", "type": "call", "contact_id": 2, "timestamp": "2026-11-21T18:30:00Z", "duration_seconds": 540 },
+    { "id": "c09", "type": "text_sent", "contact_id": 2, "timestamp": "2026-11-20T12:00:00Z" },
+    { "id": "c10", "type": "text_received", "contact_id": 2, "timestamp": "2026-11-20T12:04:00Z" },
+
+    { "id": "c11", "type": "text_sent", "contact_id": 3, "timestamp": "2026-11-24T09:15:00Z" },
+    { "id": "c12", "type": "text_received", "contact_id": 3, "timestamp": "2026-11-24T09:20:00Z" },
+    { "id": "c13", "type": "text_sent", "contact_id": 3, "timestamp": "2026-11-23T11:45:00Z" },
+    { "id": "c14", "type": "text_received", "contact_id": 3, "timestamp": "2026-11-23T11:50:00Z" },
+    { "id": "c15", "type": "call", "contact_id": 3, "timestamp": "2026-11-22T15:00:00Z", "duration_seconds": 1200 },
+    { "id": "c16", "type": "text_sent", "contact_id": 3, "timestamp": "2026-11-21T14:10:00Z" },
+    { "id": "c17", "type": "text_received", "contact_id": 3, "timestamp": "2026-11-21T14:22:00Z" },
+    { "id": "c18", "type": "text_sent", "contact_id": 3, "timestamp": "2026-11-20T16:05:00Z" },
+    { "id": "c19", "type": "text_received", "contact_id": 3, "timestamp": "2026-11-19T10:12:00Z" },
+    { "id": "c20", "type": "text_sent", "contact_id": 3, "timestamp": "2026-11-19T10:18:00Z" },
+
+    { "id": "c21", "type": "text_sent", "contact_id": 4, "timestamp": "2026-11-22T21:10:00Z" },
+    { "id": "c22", "type": "text_received", "contact_id": 4, "timestamp": "2026-11-22T21:15:00Z" },
+    { "id": "c23", "type": "calendar_event", "contact_id": 4, "timestamp": "2026-11-18T19:00:00Z", "duration_seconds": 7200, "note": "Coffee & Gallery" },
+    { "id": "c24", "type": "text_sent", "contact_id": 4, "timestamp": "2026-11-17T17:40:00Z" },
+    { "id": "c25", "type": "text_received", "contact_id": 4, "timestamp": "2026-11-17T17:42:00Z" },
+
+    { "id": "c26", "type": "call", "contact_id": 5, "timestamp": "2026-11-23T20:15:00Z", "duration_seconds": 1800 },
+    { "id": "c27", "type": "text_sent", "contact_id": 5, "timestamp": "2026-11-23T21:00:00Z" },
+    { "id": "c28", "type": "text_received", "contact_id": 5, "timestamp": "2026-11-21T13:30:00Z" },
+    { "id": "c29", "type": "text_sent", "contact_id": 5, "timestamp": "2026-11-21T13:35:00Z" },
+
+    { "id": "c30", "type": "call", "contact_id": 6, "timestamp": "2026-11-24T10:00:00Z", "duration_seconds": 960 },
+    { "id": "c31", "type": "text_sent", "contact_id": 6, "timestamp": "2026-11-24T08:30:00Z" },
+    { "id": "c32", "type": "text_received", "contact_id": 6, "timestamp": "2026-11-23T14:12:00Z" },
+    { "id": "c33", "type": "text_sent", "contact_id": 6, "timestamp": "2026-11-23T14:15:00Z" },
+    { "id": "c34", "type": "text_sent", "contact_id": 6, "timestamp": "2026-11-22T19:00:00Z" },
+    { "id": "c35", "type": "text_received", "contact_id": 6, "timestamp": "2026-11-22T19:05:00Z" },
+    { "id": "c36", "type": "text_sent", "contact_id": 6, "timestamp": "2026-11-20T09:30:00Z" },
+
+    { "id": "c37", "type": "text_sent", "contact_id": 2, "timestamp": "2026-11-18T15:20:00Z" },
+    { "id": "c38", "type": "text_received", "contact_id": 2, "timestamp": "2026-11-18T15:22:00Z" },
+    { "id": "c39", "type": "text_sent", "contact_id": 3, "timestamp": "2026-11-17T10:00:00Z" },
+    { "id": "c40", "type": "text_received", "contact_id": 3, "timestamp": "2026-11-17T10:05:00Z" },
+    { "id": "c41", "type": "text_sent", "contact_id": 3, "timestamp": "2026-11-16T16:40:00Z" },
+    { "id": "c42", "type": "text_received", "contact_id": 3, "timestamp": "2026-11-16T16:45:00Z" },
+    { "id": "c43", "type": "text_sent", "contact_id": 4, "timestamp": "2026-11-15T12:00:00Z" },
+    { "id": "c44", "type": "text_received", "contact_id": 4, "timestamp": "2026-11-15T12:05:00Z" },
+    { "id": "c45", "type": "call", "contact_id": 3, "timestamp": "2026-11-14T11:00:00Z", "duration_seconds": 600 },
+    { "id": "c46", "type": "text_sent", "contact_id": 2, "timestamp": "2026-11-14T09:00:00Z" },
+    { "id": "c47", "type": "text_received", "contact_id": 2, "timestamp": "2026-11-13T20:00:00Z" }
+  ]
+}
