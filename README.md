@@ -4,7 +4,7 @@
 
 ---
 
-## ⚡ The 30-Second "Wow" Pitch Flow (Hackathon Presentation)
+## Pitch Flow (Hackathon Presentation)
 
 Follow this exact 5-step script during your judging presentation:
 
